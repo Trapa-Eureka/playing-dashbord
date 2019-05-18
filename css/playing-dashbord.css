@@ -10,6 +10,10 @@ h1, h2, h3, h4, h5, h6, body, html {
     padding: 0;
 }
 
+ul, li {
+    list-style-type: none;
+}
+
 html, body, main {
     padding: 0;
     margin: 0;
@@ -20,5 +24,81 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #fafafc;
-    padding: 150px 50px;
+}
+
+.outer {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, max-content));
+    grid-gap: 0;
+}
+.left {
+    display: grid;
+    grid-template-rows: repeat(3, max-content);
+    grid-gap: 0;
+}
+.logo__area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+}
+.logo__area .text__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text__logo .logo__circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    width: 34px;
+    height: 34px;
+    border-radius: 17px;
+    color: #fff;
+    font-weight: 500;
+    margin-right: 10px;
+    background-color: #CA0F65;
+}
+.text__logo .logo__text {
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.left .menu__row, .left .account__area {
+    padding: 0;
+    margin: 0;
+}
+.left .menu__row {
+    display: grid;
+    grid-template-rows: repeat(5, max-content);
+    margin-top: 0;
+    grid-gap: 20px;
+}
+.left .account__area {
+    display: grid;
+    grid-template-rows: repeat(3, max-content);
+    grid-gap: 20px;
+    margin-top: 80px;
+}
+.menu__row .row__item, .account__area .row__item {
+    display: flex;
+    align-items: center;
+    margin-left: 90px;
+}
+.row__item svg {
+    fill: #6E7E90;
+    margin-right: 15px;
+}
+.row__item .item__link {
+    text-decoration: none;
+    color: #728193;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+}
+
+.right {
+    border-left: 1px solid #d3d3d3;
 }
